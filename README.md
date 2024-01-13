@@ -4,4 +4,4 @@ Moving ANES cleaning, analysis, figure making to github. ;
 Multiverse Analysis .R added;
 Multiverse Analysis cleaning scirpt added (.R file);
 Multiverse Figure scirpt added (.R file);
-Mutliverse figure script updated (with correct libraries);
+Mutliverse figure script updated (with correct libraries); 
