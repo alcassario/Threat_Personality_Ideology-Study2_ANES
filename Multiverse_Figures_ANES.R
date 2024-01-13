@@ -4,6 +4,10 @@ getwd()
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
+library(cowplot)
+library(gridExtra)
+library(grid)
+library(lattice)
 
 # data 
 interactions_wide <- readRDS("interactions_wide.rds")
