@@ -36,4 +36,4 @@ pow_test # about 100 percent power for moderately sized threat effect
 ### power analysis for moderately sized interaction effect #### 
 fixef(mod_int)["Open:ue_rate"] <- .20
 pow_test <- powerSim(mod_int, test = fixed("Open:ue_rate", "t"), nsim = 100)
-pow_test # about 100 percent power for moderately sized threat effect 
+pow_test # about 84 percent power for moderately sized interaction
