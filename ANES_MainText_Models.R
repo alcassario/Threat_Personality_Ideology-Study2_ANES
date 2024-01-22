@@ -68,6 +68,9 @@ dat$Year <- as.factor(dat$Year)
 dat$traditionalism <- rescale(dat$traditionalism)
 dat$male <- ifelse(is.na(dat$male), 0, dat$male)
 
+### writing data file for post-hoc power analysis ##
+saveRDS(dat,"dat.rds")
+
 ### models 
 
 # symbolic no interactions

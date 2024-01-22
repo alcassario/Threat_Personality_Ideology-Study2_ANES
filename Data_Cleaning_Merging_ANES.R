@@ -135,7 +135,7 @@ dat_2012$strong_gov <- nalevs(dat_2012$strong_gov)
 dat_2016$strong_gov <- nalevs(dat_2016$strong_gov)
 dat_2012$govrole_big <- nalevs(dat_2012$govrole_big)
 dat_2016$govrole_big <- nalevs(dat_2016$govrole_big)
-dat_2012$trad_3_r
+
 
 ######## Merging data ##########
 dat_2012 <- remove_labels(dat_2012)
