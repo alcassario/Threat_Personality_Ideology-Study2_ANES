@@ -100,6 +100,14 @@ m_trad_no_int <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons + male
 summary(m_trad_no_int)
 # unemployment marginally more conservative socially 
 
+# traditionalism/social conservatism no interactions, race dummy indicator
+m_trad_no_int_binary_race <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons + male + minority+ 
+                                    income + edu + age + Crime.Rate + ue_rate + p_non_white + 
+                        as.factor(Year) + 
+                        (1| state), data = dat)
+summary(m_trad_no_int_binary_race)
+# unemployment marginally more conservative socially 
+
 # operational no interactions
 m_operational_no_int <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + contrast1 + 
                                contrast2 + contrast3 + income + edu + age +  Crime.Rate  + 
@@ -107,6 +115,12 @@ m_operational_no_int <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + 
                                as.factor(Year) + (1| state), data = dat)
 summary(m_operational_no_int)
 
+# operational no interactions, binary race 
+m_operational_no_int_binary_race <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + minority + 
+                                           income + edu + age +  Crime.Rate  + 
+                               ue_rate + p_non_white + 
+                               as.factor(Year) + (1| state), data = dat)
+summary(m_operational_no_int_binary_race)
 
 # symbolic interactions 
 m_ideo <- lmer(ideology ~ Open + Extra + Agree + Neur + Cons + male + contrast1 + 
@@ -115,19 +129,43 @@ m_ideo <- lmer(ideology ~ Open + Extra + Agree + Neur + Cons + male + contrast1 
                  (1|state), data = dat)
 summary(m_ideo)
 
+# symbolic interactions, binary race 
+m_ideo_binary_race <- lmer(ideology ~ Open + Extra + Agree + Neur + Cons + male + minority + 
+                             income + edu + age + Open*Crime.Rate + Cons*Crime.Rate + 
+                 Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white + as.factor(Year) +
+                 (1|state), data = dat)
+summary(m_ideo_binary_race)
+
 # traditionalism interactions
 m_trad <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons + male + contrast1 + 
-                 contrast2 + contrast3 + income + edu + age + Open*Crime.Rate + Cons*Crime.Rate + 
-                 Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white + as.factor(Year) + 
-                 (1| state), data = dat)
+                             contrast2 + contrast3 + 
+                             income + edu + age + Open*Crime.Rate + Cons*Crime.Rate + 
+                             Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white + as.factor(Year) + 
+                             (1| state), data = dat)
 summary(m_trad)
 
+
+# traditionalism interactions, binary race 
+m_trad_binary_race <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons + male + minority+ 
+                             income + edu + age + Open*Crime.Rate + Cons*Crime.Rate + 
+                 Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white + as.factor(Year) + 
+                 (1| state), data = dat)
+summary(m_trad_binary_race)
+
 # operational interactions 
-m_operational <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + contrast1 + 
-                        contrast2 + contrast3 + income + edu + age +  Open*Crime.Rate + Cons*Crime.Rate + 
+m_operational_binary_race <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + contrast1 +
+                                    contrast2 + contrast3 + 
+                                    income + edu + age +  Open*Crime.Rate + Cons*Crime.Rate + 
+                                    Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white  + 
+                                    as.factor(Year) + (1| state), data = dat)
+summary(m_operational_binary_race)
+
+# operational interactions, binary race  
+m_operational_binary_race <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + minority + 
+                                    income + edu + age +  Open*Crime.Rate + Cons*Crime.Rate + 
                         Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white  + 
                         as.factor(Year) + (1| state), data = dat)
-summary(m_operational)
+summary(m_operational_binary_race)
 
 
 # saving for future plotting 
