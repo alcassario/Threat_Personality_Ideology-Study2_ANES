@@ -64,6 +64,10 @@ dat$contrast3[dat$race==5] <- .5
 dat$contrast3[dat$race==3 | dat$race==4 | dat$race==6] <- -.5
 dat$contrast3<-dat$contrast3-(mean(na.omit(dat$contrast3)))
 
+# dummy coding non-white variable so 
+# coefs are for white baseling group 
+dat$minority <- ifelse(dat$race == 1, 0, 1)
+
 dat$Year <- as.factor(dat$Year)
 dat$traditionalism <- rescale(dat$traditionalism)
 dat$male <- ifelse(is.na(dat$male), 0, dat$male)
@@ -80,7 +84,13 @@ m_ideo_no_int <- lmer(ideology ~ Open + Extra + Agree + Neur + Cons + male + con
                         ue_rate + p_non_white + 
                         (1|state), data = dat)
 options(scipen = 999)
-summary(m_ideo_no_int)
+
+m_ideo_no_int_binary_race <- lmer(ideology ~ Open + Extra + Agree + Neur + Cons + male + minority +
+                                    income + edu + age +  as.factor(Year) +Crime.Rate + 
+                        ue_rate + p_non_white + 
+                        (1|state), data = dat)
+options(scipen = 999)
+summary(m_ideo_no_int_binary_race)
 
 # traditionalism/social conservatism no interactions 
 m_trad_no_int <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons + male + contrast1 + 
