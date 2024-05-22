@@ -153,12 +153,12 @@ m_trad_binary_race <- lmer(traditionalism ~ Open + Extra + Agree + Neur + Cons +
 summary(m_trad_binary_race)
 
 # operational interactions 
-m_operational_binary_race <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + contrast1 +
+m_operational <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + contrast1 +
                                     contrast2 + contrast3 + 
                                     income + edu + age +  Open*Crime.Rate + Cons*Crime.Rate + 
                                     Open*ue_rate + Cons*ue_rate + Open*p_non_white + Cons*p_non_white  + 
                                     as.factor(Year) + (1| state), data = dat)
-summary(m_operational_binary_race)
+summary(m_operational)
 
 # operational interactions, binary race  
 m_operational_binary_race <- lmer(Operational ~ Open + Extra + Agree + Neur + Cons + male + minority + 
@@ -171,6 +171,8 @@ summary(m_operational_binary_race)
 # saving for future plotting 
 save(m_operational, m_trad, m_ideo, m_operational_no_int, m_trad_no_int, 
      m_ideo_no_int, file = "ANES_for_plotting.Rdata")
+
+save(m_operational_binary_race, m_trad_binary_race, m_trad_no_int, file = "ANES_for_plotting_binary_race.RData")
 
 ## start fresh ## 
 rm(list = ls())
