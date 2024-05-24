@@ -172,7 +172,8 @@ summary(m_operational_binary_race)
 save(m_operational, m_trad, m_ideo, m_operational_no_int, m_trad_no_int, 
      m_ideo_no_int, file = "ANES_for_plotting.Rdata")
 
-save(m_operational_binary_race, m_trad_binary_race, m_trad_no_int, file = "ANES_for_plotting_binary_race.RData")
+save(m_operational_binary_race, m_trad_binary_race, m_trad_no_int_binary_race, 
+     m_operational_no_int_binary_race, m_ideo_binary_race, m_ideo_no_int_binary_race,  file = "ANES_for_plotting_binary_race.RData")
 
 ## start fresh ## 
 rm(list = ls())

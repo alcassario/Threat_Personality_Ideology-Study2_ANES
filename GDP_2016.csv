@@ -1,0 +1,59 @@
+"SASUMMARY State annual summary statistics: personal income, GDP, consumer spending, price indexes, and employment"
+"SASUMMARY State annual summary statistics: personal income, GDP, consumer spending, price indexes, and employment"
+State or DC
+GeoFips,GeoName,2016
+01000,Alabama,212862.8
+02000,Alaska,53463.9
+04000,Arizona,319008.4
+05000,Arkansas,123034.9
+06000,California,2623711.7
+08000,Colorado,337685.2
+09000,Connecticut,268196.2
+10000,Delaware,71941.4
+11000,District of Columbia,132217.8
+12000,Florida,978989.7
+13000,Georgia,561718.3
+15000,Hawaii,85670.4
+16000,Idaho,70442.5
+17000,Illinois,826404.7
+18000,Indiana,348439.2
+19000,Iowa,186729.9
+20000,Kansas,164643.7
+21000,Kentucky,201007.2
+22000,Louisiana,235554.2
+23000,Maine,62037.1
+24000,Maryland,391950.9
+25000,Massachusetts,521662.8
+26000,Michigan,500159.5
+27000,Minnesota,350603.6
+28000,Mississippi,109911.0
+29000,Missouri,308423.3
+30000,Montana,47189.6
+31000,Nebraska,121303.1
+32000,Nevada,156007.4
+33000,New Hampshire,80736.1
+34000,New Jersey,587049.7
+35000,New Mexico,93043.5
+36000,New York,1590567.8
+37000,North Carolina,536308.5
+38000,North Dakota,54756.0
+39000,Ohio,638157.5
+40000,Oklahoma,190093.5
+41000,Oregon,214769.3
+42000,Pennsylvania,744847.1
+44000,Rhode Island,58630.0
+45000,South Carolina,220559.3
+46000,South Dakota,51264.3
+47000,Tennessee,343544.9
+48000,Texas,1633863.3
+49000,Utah,162528.2
+50000,Vermont,32312.7
+51000,Virginia,505107.7
+53000,Washington,495724.9
+54000,West Virginia,73513.3
+55000,Wisconsin,319272.3
+56000,Wyoming,37853.5
+
+Legend/Footnotes
+"1. Chained (2017) dollar series are calculated as the product of the chain-type quantity index and the 2017 current-dollar value of the corresponding series, divided by 100. Because the formula for the chain-type quantity indexes uses weights of more than one period, the corresponding chained-dollar estimates are usually not additive. The difference between the United States and sum-of-states reflects federal military and civilian activity located overseas, as well as the differences in source data used to estimate GDP by industry and the expenditures measure of real GDP."
+"  Last updated: May 23, 2024."
