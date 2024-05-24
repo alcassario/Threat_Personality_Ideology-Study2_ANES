@@ -4,3 +4,4 @@
 .Ruserdata
 *.rds
 *.RDS
+*.DS_Store
